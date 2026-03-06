@@ -10,21 +10,21 @@ Interface
 
 Dashboard
 
-"UI_dashboard" (Assets/UI_Dashbord.png)
+"UI_dashboard" (Codev_V2/Assets/UI_Dashbord.png)
 
 Tela de login
 
-"UI_Login" (Assets/UI_Login.png)
+"UI_Login" (Codev_V2/Assets/UI_Login.png)
 
 Tela de carregamento
 
-"UI_Splash_Screen" (Assets/UI_Splash.png)
+"UI_Splash_Screen" (Codev_V2/Assets/UI_Splash.png)
 
 ---
 
 Tecnologias utilizadas
 
-##Backend
+Backend
 
 - C#
 - ASP.NET Core Web API
