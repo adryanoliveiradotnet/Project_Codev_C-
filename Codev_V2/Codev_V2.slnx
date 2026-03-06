@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path="Assets/UI_Client_Page.png" />
+    <File Path="Assets/UI_Dashbord.png" />
+    <File Path="Assets/UI_Login.png" />
+    <File Path="Assets/UI_Splash.png" />
+  </Folder>
+  <Project Path="API_Codev/API_Codev.csproj" Id="9a561757-e9d0-4b55-ac95-5fa3e94a9c73" />
+  <Project Path="Codev_V2/Codev_V2.csproj" />
+</Solution>
