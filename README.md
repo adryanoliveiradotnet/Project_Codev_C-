@@ -1,43 +1,48 @@
-Codev
-
+# PROJECT CODEV
 Sistema desktop para gestão de assistência técnica, desenvolvido com C# e .NET, utilizando arquitetura com API REST e banco de dados PostgreSQL.
 
 O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, permitindo registrar e acompanhar reparos de forma simples e centralizada.
 
 ---
 
-Interface
+# Interface
 
-Dashboard
+## UI_Dashboard
 
-![UI_dashboard](Codev_V2/Assets/UI_Dashbord.png)
+<p align="center">
+  <img src="Codev_V2/Assets/UI_Dashbord.png" width="900">
+</p>
 
-Tela de login
+## UI_Login
 
-![UI_Login](Codev_V2/Assets/UI_Login.png)
+<p align="center">
+  <img src="Codev_V2/Assets/UI_Login.png" width="900">
+</p>
 
-Tela de carregamento
+## UI_Splash
 
-![UI_Splash](Codev_V2/Assets/UI_Splash.png)
+<p align="center">
+  <img src="Codev_V2/Assets/UI_Splash.png" width="900">
+</
 
 ---
 
-Tecnologias utilizadas
+# Tecnologias utilizadas
 
-Backend
+## Backend
 
 - C#
 - ASP.NET Core Web API
 - Entity Framework Core
 - PostgreSQL
 
-Frontend Desktop
+## Frontend Desktop
 
 - WPF
 - XAML
 - HandyControl
 
-Ferramentas
+## Ferramentas
 
 - Visual Studio
 - Git
@@ -45,9 +50,9 @@ Ferramentas
 
 ---
 
-Arquitetura do sistema
+# Arquitetura do sistema
 
-O sistema utiliza uma arquitetura em três camadas:
+## O sistema utiliza uma arquitetura em três camadas:
 
 WPF Desktop (Interface)
         ↓
@@ -55,7 +60,7 @@ ASP.NET REST API
         ↓
 PostgreSQL Database
 
-Essa separação permite:
+## Essa separação permite:
 
 - melhor organização do código
 - segurança no acesso ao banco
@@ -63,7 +68,7 @@ Essa separação permite:
 
 ---
 
-Funcionalidades atuais
+## Funcionalidades atuais
 
 - Tela de login com autenticação
 - Conexão com API REST
@@ -76,7 +81,7 @@ Funcionalidades atuais
 
 ---
 
-Funcionalidades planejadas
+## Funcionalidades planejadas
 
 - Listagem de clientes
 - Sistema de ordens de serviço
@@ -87,7 +92,7 @@ Funcionalidades planejadas
 
 ---
 
-Estrutura do projeto
+## Estrutura do projeto
 
 Codev
 │
@@ -102,52 +107,52 @@ Codev
 
 ---
 
-Como executar o projeto
+## Como executar o projeto
 
-1. Clonar o repositório
+- Clonar o repositório
 
-git clone https://github.com/seuusuario/codev.git
+  git clone https://github.com/seuusuario/codev.git
 
-2. Abrir no Visual Studio
+- Abrir no Visual Studio
 
-Abrir a Solution (.sln).
+  Abrir a Solution (.sln).
 
-3. Configurar banco de dados
+- Configurar banco de dados
 
-Editar a connection string no projeto da API.
+  Editar a connection string no projeto da API.
 
-appsettings.json
+  appsettings.json
 
-Exemplo:
+  Exemplo:
 
-Host=localhost;
-Port=5432;
-Database=codev;
-Username=postgres;
-Password=sua_senha;
+  Host=localhost;
+  Port=5432;
+  Database=codev;
+  Username=postgres;
+  Password=sua_senha;
 
-4. Executar migrations
+- Executar migrations
 
-No console do gerenciador de pacotes:
+  No console do gerenciador de pacotes:
 
-Update-Database
+  Update-Database
 
-5. Executar a aplicação
+- Executar a aplicação
 
-1. Iniciar a API
-2. Executar o projeto WPF
+- Iniciar a API
+- Executar o projeto WPF
 
 ---
 
-Objetivo do projeto
+# Objetivo do projeto
 
-Este projeto foi desenvolvido para estudo de:
+## Este projeto está sendo desenvolvido para estudo de:
 
-- desenvolvimento desktop com WPF
+- desenvolvimento desktop com WPF/WinUI3/MAUI
 - criação de API REST com ASP.NET
 - integração com PostgreSQL
 - arquitetura de aplicações em múltiplas camadas
 
 ---
 
-Autor: Adrian Oliveira
+by: Adrian Oliveira
