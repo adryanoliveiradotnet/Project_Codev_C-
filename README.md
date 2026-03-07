@@ -8,36 +8,36 @@ O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, 
 
 Interface
 
-Dashboard
+#Dashboard
 
-"UI_dashboard" (Codev_V2/Assets/UI_Dashbord.png)
+![UI_dashboard](Codev_V2/Assets/UI_Dashbord.png)
 
-Tela de login
+#Tela de login
 
-"UI_Login" (Codev_V2/Assets/UI_Login.png)
+![UI_Login](Codev_V2/Assets/UI_Login.png)
 
-Tela de carregamento
+#Tela de carregamento
 
-"UI_Splash_Screen" (Codev_V2/Assets/UI_Splash.png)
+![UI_Splash](Codev_V2/Assets/UI_Splash.png)
 
 ---
 
-Tecnologias utilizadas
+#Tecnologias utilizadas
 
-Backend
+#Backend
 
 - C#
 - ASP.NET Core Web API
 - Entity Framework Core
 - PostgreSQL
 
-##Frontend Desktop
+#Frontend Desktop
 
 - WPF
 - XAML
 - HandyControl
 
-##Ferramentas
+#Ferramentas
 
 - Visual Studio
 - Git
@@ -45,7 +45,7 @@ Backend
 
 ---
 
-##Arquitetura do sistema
+#Arquitetura do sistema
 
 O sistema utiliza uma arquitetura em três camadas:
 
@@ -63,7 +63,7 @@ Essa separação permite:
 
 ---
 
-##Funcionalidades atuais
+#Funcionalidades atuais
 
 - Tela de login com autenticação
 - Conexão com API REST
@@ -76,7 +76,7 @@ Essa separação permite:
 
 ---
 
-##Funcionalidades planejadas
+#Funcionalidades planejadas
 
 - Listagem de clientes
 - Sistema de ordens de serviço
@@ -87,7 +87,7 @@ Essa separação permite:
 
 ---
 
-##Estrutura do projeto
+#Estrutura do projeto
 
 Codev
 │
@@ -102,7 +102,7 @@ Codev
 
 ---
 
-##Como executar o projeto
+#Como executar o projeto
 
 1. Clonar o repositório
 
@@ -114,7 +114,7 @@ Abrir a Solution (.sln).
 
 3. Configurar banco de dados
 
-Editar a connection string no projeto da API.
+#Editar a connection string no projeto da API.
 
 appsettings.json
 
@@ -128,7 +128,7 @@ Password=sua_senha;
 
 4. Executar migrations
 
-##No console do gerenciador de pacotes:
+#No console do gerenciador de pacotes:
 
 Update-Database
 
@@ -141,7 +141,7 @@ Update-Database
 
 Objetivo do projeto
 
-##Este projeto foi desenvolvido para estudo de:
+#Este projeto foi desenvolvido para estudo de:
 
 - desenvolvimento desktop com WPF
 - criação de API REST com ASP.NET
