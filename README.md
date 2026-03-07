@@ -23,8 +23,12 @@ O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, 
 
 <p align="center">
   <img src="Codev_V2/Assets/UI_Splash.png" width="900">
-</
+</p>
 
+## UI_Client_Page
+  <p align="center">
+  <img src="Codev_V2/Assets/UI_Client_Page.png" width="900">
+</p>
 ---
 
 # Tecnologias utilizadas
