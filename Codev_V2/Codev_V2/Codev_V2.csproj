@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Assets\icone.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\logo_white.ico</ApplicationIcon>
     <AssemblyName>Project Codev</AssemblyName>
   </PropertyGroup>
 
@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\icone.ico" />
+    <Content Include="Assets\logo_white.ico" />
   </ItemGroup>
 
   <ItemGroup>

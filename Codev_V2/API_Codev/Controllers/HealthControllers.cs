@@ -14,9 +14,9 @@ namespace API_Codev.Controllers
         {
             var ok = await db.Database.CanConnectAsync();
             if(ok)
-                return Ok(new { status = "db_on" });
+                return Ok(new { status = "DATABASE ONLINE" });
             return
-            StatusCode(503, new { status = "db_off" });
+            StatusCode(503, new { status = "DATABASE OFFLINE" });
         }       
     }
 }

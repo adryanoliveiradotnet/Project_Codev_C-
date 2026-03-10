@@ -30,7 +30,7 @@ namespace Codev_V2
         }
         private void Clientes_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Clientes());
         }
 
         private void Inicio_Click(object sender, RoutedEventArgs e)
@@ -40,7 +40,7 @@ namespace Codev_V2
 
         private void Conta_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Inicio());
+            MainFrame.Navigate(new Cadastro());
         }
         private void Sobre_Click(object sender, RoutedEventArgs e)
         {

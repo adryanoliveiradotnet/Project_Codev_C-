@@ -5,6 +5,52 @@
              StartupUri="Splash.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <!-- Data GRID -->
+            <Style TargetType="DataGridCell">
+                <Setter Property="Background" Value="#212328"/>
+                <Setter Property="Foreground" Value="#E0E1E6"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Style.Triggers>
+                    <Trigger Property="IsSelected" Value="True">
+                        <Setter Property="Background" Value="#2A7AFF"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style TargetType="DataGrid">
+    <Setter Property="Background" Value="#212328"/>
+    <Setter Property="Foreground" Value="#E0E1E6"/>
+    <Setter Property="BorderBrush" Value="#393C44"/>
+    <Setter Property="RowBackground" Value="#212328"/>
+    <Setter Property="AlternatingRowBackground" Value="#2A2D34"/>
+    <Setter Property="GridLinesVisibility" Value="None"/>
+    <Setter Property="HorizontalGridLinesBrush" Value="#393C44"/>
+    <Setter Property="VerticalGridLinesBrush" Value="#393C44"/>
+    <Setter Property="HorizontalContentAlignment" Value="Right"/>
+</Style>
+<Style TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="#2A2D34"/>
+        <Setter Property="Foreground" Value="#E0E1E6"/>
+        <Setter Property="BorderBrush" Value="#393C44"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+            <Style TargetType="DataGridRow">
+                <Setter Property="Background" Value="#212328"/>
+                <Setter Property="Foreground" Value="#E0E1E6"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#2A2D34"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#2A2D34"/>
+                    </Trigger>
+                    <Trigger Property="IsSelected" Value="True">
+                        <Setter Property="Background" Value="#393C44"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <!-- Group BOX -->
             <Style TargetType="GroupBox">
                 <Setter Property="BorderBrush" Value="#393C44"/>
                 <Setter Property="BorderThickness" Value="1"/>
@@ -17,13 +63,11 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
-                                <!-- Header -->
                                 <Border Background="#393C44"
                                 Padding="8"
                                 CornerRadius="2">
                                     <ContentPresenter ContentSource="Header"/>
                                 </Border>
-                                <!-- Conteúdo -->
                                 <Border Grid.Row="1"
                                 BorderBrush="#393C44"
                                 BorderThickness="1"
@@ -35,6 +79,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+            <!-- Buttons Menu STYLE -->
             <Style x:Key="MenuButtonNoHover" TargetType="Button">
                 <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="BorderBrush" Value="Transparent"/>

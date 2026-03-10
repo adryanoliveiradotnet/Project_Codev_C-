@@ -16,9 +16,9 @@ namespace Codev_V2.Páginas
     /// <summary>
     /// Interação lógica para Inicio.xam
     /// </summary>
-    public partial class Inicio : Page
+    public partial class Cadastro : Page
     {
-        public Inicio()
+        public Cadastro()
         {
             InitializeComponent();
         }

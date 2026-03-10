@@ -52,7 +52,7 @@
                     </Button>
                 </StackPanel>
             </Border>
-            <Button Grid.Column="1" x:Name="Fechar" Content="✖" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Foreground="#6B6C6F" Click="Fechar_Click" Height="50" Width="50" RenderTransformOrigin="-0.475,0.55" Margin="0,-1,5,0"/>
+            <Button Grid.Column="1" x:Name="Fechar" Content="✖" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Foreground="#6B6C6F" Click="Fechar_Click" Height="50" Width="50" RenderTransformOrigin="-0.475,0.55" Margin="0,-1,-1,0"/>
             <Image HorizontalAlignment="Left" Height="130" Margin="39,23,0,0" VerticalAlignment="Top" Width="130" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality" UseLayoutRounding="True"/>
             <Button Style="{StaticResource MenuButtonNoHover}" Click="Logout_Click" FocusVisualStyle="{x:Null}" Cursor="Hand" Margin="13,659,11,19">
                 <StackPanel Orientation="Horizontal">
