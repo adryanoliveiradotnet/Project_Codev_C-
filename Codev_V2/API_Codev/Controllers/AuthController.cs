@@ -13,14 +13,14 @@ namespace API_Codev.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest req, [FromServices] AppDbContext db)
         {
-            var user = await db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Username == req.Username && u.IsActive);
+            var user = await db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Usuario == req.Username && u.AppStatus);
             if (user is null) return Unauthorized(new { message = "Usuário ou senha inválidos" });
 
-            var ok = BCrypt.Net.BCrypt.Verify(req.Password, user.PasswordHash);
+            var ok = BCrypt.Net.BCrypt.Verify(req.Password, user.Senha);
 
             if (!ok) return Unauthorized(new { message = "Usuário ou senha inválidos" });
 
-            return Ok(new { userId = user.Id, username = user.Username });
+            return Ok(new { userId = user.Id, username = user.Usuario });
         }
     }
 }

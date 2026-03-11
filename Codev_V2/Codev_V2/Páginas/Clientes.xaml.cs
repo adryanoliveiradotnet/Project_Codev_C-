@@ -23,27 +23,13 @@ namespace Codev_V2.Páginas
         {
             InitializeComponent();
         }
-        public class ListClientes()
+        public async Task ListClientes()
         {
-            public int Id { get; set; }
-            public string Nome { get; set; }
-            public string Modelo { get; set; }
+            CodevClientes.ItemsSource = await Web.Api.ListarClientesAsync();
         }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var clientes = new List<ListClientes>
-            {
-                new ListClientes{Id = 1, Nome="Adrian Oliveira", Modelo="Galaxy S23 FE",
-                },
-                 new ListClientes{Id = 3, Nome="Maria Joana", Modelo="iPhone 14 Pro Max",
-                },
-                  new ListClientes{Id = 44, Nome="Irineu da Silva", Modelo="Samsung Pocket",
-                },
-                   new ListClientes{Id = 33, Nome="Jalin Rabei", Modelo="Windows Phone",
-                },
-            };
-            CodevClientes.ItemsSource = clientes;
+            await ListClientes();
         }
     }
 }

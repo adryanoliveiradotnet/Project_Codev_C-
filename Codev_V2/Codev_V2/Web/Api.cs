@@ -14,11 +14,11 @@ namespace Codev_V2.Web
         {
             BaseAddress = new Uri("https://localhost:7097")
         };
-        public static async Task<bool> HealthAsync()
+        public static async Task<bool>DBAsync()
         {
             try
             {
-                var resp = await Http.GetAsync("api/health");
+                var resp = await Http.GetAsync("api/db");
                 return resp.IsSuccessStatusCode;
             }
             catch
@@ -26,17 +26,35 @@ namespace Codev_V2.Web
                 return false;
             }
         }
+        public class LoginResponse
+        {
+            public int UserId {get;set;}
+            public string Username {get;set;} = "";
+        }
         public static async Task<LoginResponse?>LoginAsync(string username, string password)
         {
-            var resp = await Http.PostAsJsonAsync("api/auth/login", new { username, password });
+            var resp = await Http.PostAsJsonAsync("api/auth/login", new {username, password});
             if (!resp.IsSuccessStatusCode)
                 return null;
             return await resp.Content.ReadFromJsonAsync<LoginResponse>();
         }
-        public class LoginResponse
+        public class Clientes
         {
-            public int UserId { get; set; }
-            public string Username { get; set; } = "";
+            public int Id { get; set; }
+            public string Cliente { get; set; } = "";
+            public string Endereço { get; set; } = "";
+            public int Numero { get; set; }
+            public string Bairro { get; set; } = "";
+
+        }
+        public static async Task<List<Clientes>?>ListarClientesAsync()
+        {
+            return await Http.GetFromJsonAsync<List<Clientes>>("api/client");
+        }
+        public static async Task<bool>CriarClientesAsync(Clientes clientes)
+        {
+            var resp = await Http.PostAsJsonAsync("api/client", clientes);
+            return resp.IsSuccessStatusCode;
         }
     }
 }

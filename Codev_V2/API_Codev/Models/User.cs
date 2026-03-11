@@ -5,9 +5,9 @@ namespace API_Codev.Models
     public class User
     {
         public int Id { get; set; }
-        public string Username { get; set; } = "";
-        public string PasswordHash { get; set; } = "";
-        public bool IsActive { get; set; } = true;
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public string Usuario { get; set; } = "";
+        public string Senha { get; set; } = "";
+        public bool AppStatus { get; set; } = true;
+        public DateTime Data { get; set; } = DateTime.UtcNow;
     }
 }

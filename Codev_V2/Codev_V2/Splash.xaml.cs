@@ -34,7 +34,7 @@ namespace Codev_V2
 
             BeginAnimation(OpacityProperty, fade);
 
-            var ok = await Api.HealthAsync();
+            var ok = await Api.DBAsync();
             if (!ok)
             {
                 MessageBox.Show("Não foi possível conectar ao banco de dados.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
