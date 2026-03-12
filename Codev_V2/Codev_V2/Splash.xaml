@@ -14,10 +14,10 @@
         WindowStartupLocation="CenterScreen"
         Opacity="10"
         ResizeMode="NoResize" Loaded="Window_Loaded">
-    <Border Background="#212328" CornerRadius="10" BorderThickness="1" BorderBrush="#FF393A3A">
+    <Border Background="#212328" CornerRadius="10" BorderThickness="1" BorderBrush="#2A2D34">
         <Grid>
             <Label HorizontalAlignment="Center" Content="Carregando..." Margin="0,216,0,0" VerticalAlignment="Top" Background="Transparent" FontFamily="Segoe UI Semibold" BorderBrush="Transparent" Foreground="#E0E1E6" FontWeight="Bold"/>
-            <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="100" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
+            <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="100" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"/>
         </Grid>
     </Border>
 </hc:Window>

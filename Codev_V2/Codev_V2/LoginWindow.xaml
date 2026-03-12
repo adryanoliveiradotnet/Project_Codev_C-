@@ -20,14 +20,14 @@
             <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         </Style>
     </hc:Window.Resources>
-    <Border Background="#FF222325" CornerRadius="10" BorderThickness="1" BorderBrush="#FF393A3A">
+    <Border Background="#FF222325" CornerRadius="10" BorderThickness="1" BorderBrush="#2A2D34">
         <Grid x:Name="Login" RenderTransformOrigin="0.621,0.821">
-            <hc:TextBox Name="User_" hc:InfoElement.Placeholder="Usuário" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Width="236" Height="30" Background="#393C44" BorderThickness="0,0,0,0" Foreground="#E0E1E6" FontWeight="SemiBold" CaretBrush="{x:Null}"/>
-            <hc:PasswordBox Name="Pass_" hc:InfoElement.Placeholder="Senha" HorizontalAlignment="Center" Margin="0,236,0,0" VerticalAlignment="Top" Width="236" Height="30" Background="#393C44" BorderThickness="0,0,0,0" Foreground="#E0E1E6" FontWeight="SemiBold"/>
+            <hc:TextBox Name="User_" hc:InfoElement.Placeholder="Usuário" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Width="236" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold" CaretBrush="{x:Null}"/>
+            <hc:PasswordBox Name="Pass_" hc:InfoElement.Placeholder="Senha" HorizontalAlignment="Center" Margin="0,236,0,0" VerticalAlignment="Top" Width="236" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold"/>
             <Button Content="Login" Margin="81,304,81,0" VerticalAlignment="Top" Width="236" Height="30" Background="#2A7AFF"  BorderThickness="1" Foreground="#E0E1E6" FontWeight="SemiBold" Click="Button_Click" BorderBrush="#2A7AFF"/>
-            <Button x:Name="Fechar" Content="✖" Margin="345,3,0,0" VerticalAlignment="Top" Background="Transparent"   BorderThickness="0,0,0,0" Foreground="#6B6C6F" RenderTransformOrigin="-0.485,1.585" Click="Fechar_Click" Width="50" HorizontalAlignment="Left" Height="50"/>
-            <Image HorizontalAlignment="Left" Height="100" Margin="152,56,0,0" VerticalAlignment="Top" Width="100" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
-            <ToggleButton x:Name="SalvarLogin" Content="Lembrar Senha?" HorizontalContentAlignment="Right" Margin="81,273,81,151" Foreground="#E0E1E6" FontWeight="SemiBold" Background="#393C44" Height="20" Cursor="" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked">
+            <Button x:Name="Fechar" Content="✖" Margin="345,3,0,0" VerticalAlignment="Top" Background="Transparent"   BorderThickness="0" Foreground="#6B6C6F" Click="Fechar_Click" Width="50" HorizontalAlignment="Left" Height="50"/>
+            <Image HorizontalAlignment="Left" Height="100" Margin="152,56,0,0" VerticalAlignment="Top" Width="100" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"/>
+            <ToggleButton x:Name="SalvarLogin" Content="Lembrar Senha?" HorizontalContentAlignment="Right" Margin="81,273,81,151" Foreground="#E0E1E6" FontWeight="SemiBold" Background="#2A2D34" Height="20" Cursor="" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked">
                 <ToggleButton.Resources>
                     <SolidColorBrush x:Key="PrimaryBrush" Color="#2A7AFF"/>
                 </ToggleButton.Resources>

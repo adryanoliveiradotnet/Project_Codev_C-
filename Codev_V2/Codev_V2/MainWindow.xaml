@@ -15,7 +15,7 @@
         mc:Ignorable="d"
         Opacity="10"
         Title="MainWindow" Height="720" Width="1080" Loaded="Window_Loaded">
-    <Border Background="#212328" CornerRadius="10" BorderThickness="1" BorderBrush="#FF393A3A">
+    <Border Background="#212328" CornerRadius="10" BorderThickness="1" BorderBrush="#2A2D34">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="220"/>
@@ -26,38 +26,39 @@
             <!-- SIDEBAR -->
             <Border Grid.Column="0" Background="#2A7AFF" CornerRadius="10,0,0,10" Margin="-1,-1,1,-1" BorderBrush="#FF220086">
                 <StackPanel Margin="14,184,10,16">
-                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Inicio_Click">
+                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Inicio_Click" Background="{x:Null}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Home" Width="22" Height="22" Foreground="#E0E1E6" Margin="0,0,10,0"/>
-                            <TextBlock Text="Tela Inicial" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                            <TextBlock Text="Página Inicial" VerticalAlignment="Center" FontWeight="SemiBold"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Conta_Click" Margin="0,8,0,0">
+                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Conta_Click" Margin="0,8,0,0" Background="{x:Null}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Account" Width="22" Height="22" Foreground="#E0E1E6" Margin="0,0,10,0" FontWeight="SemiBold"/>
-                            <TextBlock Text="Cadastrar" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                            <TextBlock Text="Cadastrar Clientes
+                                       " VerticalAlignment="Center" FontWeight="SemiBold" Width="100"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Clientes_Click" Margin="0,8,0,0">
+                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Clientes_Click" Margin="0,8,0,0" Background="{x:Null}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Store" Width="22" Height="22" Foreground="#E0E1E6" Margin="0,0,10,0" FontWeight="SemiBold"/>
-                            <TextBlock Text="Clientes" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                            <TextBlock Text="Clientes Ativos" VerticalAlignment="Center" FontWeight="SemiBold"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Sobre_Click" Margin="0,8,0,0">
+                    <Button Style="{StaticResource MenuButtonNoHover}" Click="Sobre_Click" Margin="0,8,0,0" Background="{x:Null}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="InformationOutline" Width="22" Height="22" Foreground="#E0E1E6" Margin="0,0,10,0" FontWeight="SemiBold"/>
-                            <TextBlock Text="Sobre" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                            <TextBlock Text="Sobre Nós" VerticalAlignment="Center" FontWeight="SemiBold"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
             </Border>
-            <Button Grid.Column="1" x:Name="Fechar" Content="✖" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Foreground="#6B6C6F" Click="Fechar_Click" Height="50" Width="50" RenderTransformOrigin="-0.475,0.55" Margin="0,-1,-1,0"/>
-            <Image HorizontalAlignment="Left" Height="130" Margin="39,23,0,0" VerticalAlignment="Top" Width="130" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality" UseLayoutRounding="True"/>
-            <Button Style="{StaticResource MenuButtonNoHover}" Click="Logout_Click" FocusVisualStyle="{x:Null}" Cursor="Hand" Margin="13,659,11,19">
+            <Button Grid.Column="1" x:Name="Fechar" Content="✖" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Foreground="#6B6C6F" Click="Fechar_Click" Height="50" Width="50" Margin="0,-1,-1,0"/>
+            <Image HorizontalAlignment="Left" Height="130" Margin="39,23,0,0" VerticalAlignment="Top" Width="130" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"/>
+            <Button Style="{StaticResource MenuButtonNoHover}" Click="Logout_Click" FocusVisualStyle="{x:Null}" Cursor="Hand" Margin="13,659,11,19" Background="{x:Null}">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Logout" Width="22" Height="22" Foreground="WhiteSmoke" Margin="0,0,10,0"/>
-                    <TextBlock Text="Sair" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    <TextBlock Text="Logout" VerticalAlignment="Center" FontWeight="SemiBold"/>
                 </StackPanel>
             </Button>
         </Grid>

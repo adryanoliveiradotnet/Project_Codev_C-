@@ -63,5 +63,14 @@ namespace Codev_V2.Páginas
                 MessageBox.Show("Erro ao cadastrar cliente.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        private void Limpar__Click(object sender, RoutedEventArgs e)
+        {
+            Clientes_.Text = "";
+            Endereço_.Text = "";
+            Bairro_.Text = "";
+            Número_.Text = "";
+
+            MessageBox.Show("Os campos foram limpos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Question);
+        }
     }
 }
