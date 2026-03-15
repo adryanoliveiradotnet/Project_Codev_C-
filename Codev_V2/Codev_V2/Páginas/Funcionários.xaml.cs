@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Codev_V2.Páginas
 {
     /// <summary>
-    /// Interação lógica para Welcome.xam
+    /// Interação lógica para Funcionários.xam
     /// </summary>
-    public partial class Welcome : Page
+    public partial class Funcionários : Page
     {
-        public Welcome()
+        public Funcionários()
         {
             InitializeComponent();
         }

@@ -30,34 +30,14 @@ namespace Codev_V2
         {
             Close();
         }
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var username = User_.Text.Trim();
-            var password = Pass_.Password;
-            if(string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-            {
-                MessageBox.Show("Por favor, informe o usuário e senha");
-                return;
-            }
-            var result = await Api.LoginAsync(username, password);
-            if(result is null)
-            {
-                MessageBox.Show("Usuário ou senha inválidos", "Alerta", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            new MainWindow().Show();
-            Close();
-        }
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             RegistrarLogin.Save(User_.Text.Trim(), Pass_.Password);
         }
-
         private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
         {
             RegistrarLogin.Clear();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var fade = new DoubleAnimation
@@ -73,6 +53,29 @@ namespace Codev_V2
             User_.Text = user;
             Pass_.Password = pass;
             SalvarLogin.IsChecked = !string.IsNullOrWhiteSpace(pass);
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var username = User_.Text.Trim();
+            var password = Pass_.Password;
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Por favor, informe o usuário e senha");
+                return;
+            }
+            var result = await Api.LoginAsync(username, password);
+            if (result is null)
+            {
+                MessageBox.Show("Usuário ou senha inválidos", "Alerta", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            new MainWindow(result.Username).Show();
+            Close();
         }
     }
 }

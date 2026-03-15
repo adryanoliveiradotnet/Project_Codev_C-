@@ -19,11 +19,11 @@ namespace Codev_V2
     /// </summary>
     public partial class MainWindow
     {
-        public MainWindow()
+        public MainWindow(string usuário)
         {
             InitializeComponent();
+            Usuário_conectado.Text = usuário;
         }
-
         private void Fechar_Click(object sender, RoutedEventArgs e)
         {
             Close();
@@ -32,12 +32,10 @@ namespace Codev_V2
         {
             MainFrame.Navigate(new Clientes());
         }
-
         private void Inicio_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Pagina_Inicial());
         }
-
         private void Conta_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new Cadastro());
@@ -59,8 +57,17 @@ namespace Codev_V2
                 To = 1,
                 Duration = TimeSpan.FromMilliseconds(100)
             };
-
             BeginAnimation(OpacityProperty, fade);
+            MainFrame.Navigate(new Pagina_Inicial());
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+        private void Funcionários_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Funcionários());
         }
     }
 }
