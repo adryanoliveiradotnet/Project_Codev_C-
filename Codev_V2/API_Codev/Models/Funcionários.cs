@@ -2,7 +2,7 @@
 {
     public class Funcionários
     {
-        public int Id_Registro { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; } = "";
         public string Função { get; set; } = "";
         public DateTime Data_Entrada { get; set; } = DateTime.UtcNow;

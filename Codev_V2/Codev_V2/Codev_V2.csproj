@@ -10,6 +10,16 @@
     <AssemblyName>Project Codev</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Assets\Imagem_Logo.png" />
     <None Remove="BannerLogin.png" />

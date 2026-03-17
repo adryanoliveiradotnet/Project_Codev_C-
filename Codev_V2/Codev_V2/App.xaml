@@ -6,6 +6,32 @@
              StartupUri="Splash.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <!-- Style Check BOX -->
+            <Style x:Key="ModernCheckBox" TargetType="CheckBox">
+                <Setter Property="Width" Value="18"/>
+                <Setter Property="Height" Value="18"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="CheckBox">
+                            <Border x:Name="Border" Width="18" Height="18" CornerRadius="4" Background="#2A7AFF" BorderBrush="#2A7AFF" BorderThickness="1">
+                                <Grid>
+                                    <Path x:Name="CheckMark" Data="M 2 8 L 7 13 L 16 3" Stroke="White" StrokeThickness="2" Visibility="Collapsed"/>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="#2A7AFF"/>
+                                    <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="BorderBrush" Value="#4C8DFF"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
             <!-- Gráfico OXYPLOT -->
             <Style TargetType="oxy:PlotView">
                 <Setter Property="Height" Value="250"/>

@@ -26,20 +26,30 @@ namespace Codev_V2.Páginas
         }
         private async void Salvar__Click(object sender, RoutedEventArgs e)
         {
-
             var cliente = Clientes_.Text.Trim();
             var endereco = Endereço_.Text.Trim();
             var bairro = Bairro_.Text.Trim();
-            if (string.IsNullOrWhiteSpace(cliente) || string.IsNullOrWhiteSpace(endereco) || string.IsNullOrWhiteSpace(bairro))
+            var marca = Marca_.Text.Trim();
+            var aparelho = Aparelho_.Text.Trim();
+            var defeito = Defeito_.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(cliente) ||
+                string.IsNullOrWhiteSpace(endereco) ||
+                string.IsNullOrWhiteSpace(bairro) ||
+                string.IsNullOrWhiteSpace(marca) ||
+                string.IsNullOrWhiteSpace(aparelho) ||
+                string.IsNullOrWhiteSpace(defeito))
             {
                 MessageBox.Show("Preencha todos os campos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+
             if (!int.TryParse(Número_.Text, out int numero))
             {
                 MessageBox.Show("Insira um número válido.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+
             var novoCliente = new Api.Clientes
             {
                 Cliente = cliente,
@@ -47,21 +57,42 @@ namespace Codev_V2.Páginas
                 Bairro = bairro,
                 Numero = numero
             };
-            var sucesso = await CriarClientesAsync(novoCliente);
 
-            if (sucesso)
-            {
-                MessageBox.Show("Cliente cadastrado com sucesso.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+            var clienteCriado = await CriarClientesAsync(novoCliente);
 
-                Clientes_.Text = "";
-                Endereço_.Text = "";
-                Bairro_.Text = "";
-                Número_.Text = "";
-            }
-            else
+            if (clienteCriado == null)
             {
                 MessageBox.Show("Erro ao cadastrar cliente.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
+
+            var novoAparelho = new Api.Aparelhos
+            {
+                Marca = marca,
+                Aparelho = aparelho,
+                Defeito = defeito,
+                Clientes = new Api.Clientes
+                {
+                    Id = clienteCriado.Id
+                }
+            };
+            var aparelhoCriado = await CriarAparelhoAsync(novoAparelho);
+
+            if (!aparelhoCriado)
+            {
+                MessageBox.Show("Cliente cadastrado, mas houve erro ao cadastrar o aparelho.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            MessageBox.Show("Cliente e aparelho cadastrados com sucesso.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            Clientes_.Text = "";
+            Endereço_.Text = "";
+            Bairro_.Text = "";
+            Número_.Text = "";
+            Marca_.Text = "";
+            Aparelho_.Text = "";
+            Defeito_.Text = "";
         }
         private void Limpar__Click(object sender, RoutedEventArgs e)
         {
@@ -69,6 +100,9 @@ namespace Codev_V2.Páginas
             Endereço_.Text = "";
             Bairro_.Text = "";
             Número_.Text = "";
+            Marca_.Text = "";
+            Aparelho_.Text = "";
+            Defeito_.Text = "";
 
             MessageBox.Show("Os campos foram limpos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Question);
         }

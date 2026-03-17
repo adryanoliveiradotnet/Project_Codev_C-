@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Codev_V2.Web;
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -30,6 +31,14 @@ namespace Codev_V2.Páginas
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             await ListClientes();
+        }
+        private void CodevClientes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (CodevClientes.SelectedItem is Api.Clientes clienteSelecionado)
+            {
+                NavigationService?.Navigate(new DetalhesClientes(clienteSelecionado));
+            }
+
         }
     }
 }

@@ -30,11 +30,11 @@ namespace Codev_V2
         {
             Close();
         }
-        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+        private void SalvarLogin_Checked(object sender, RoutedEventArgs e)
         {
             RegistrarLogin.Save(User_.Text.Trim(), Pass_.Password);
         }
-        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        private void SalvarLogin_Unchecked(object sender, RoutedEventArgs e)
         {
             RegistrarLogin.Clear();
         }
@@ -46,9 +46,7 @@ namespace Codev_V2
                 To = 1,
                 Duration = TimeSpan.FromMilliseconds(100)
             };
-
             BeginAnimation(OpacityProperty, fade);
-
             var (user, pass) = RegistrarLogin.Load();
             User_.Text = user;
             Pass_.Password = pass;
