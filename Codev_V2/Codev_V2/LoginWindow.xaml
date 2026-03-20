@@ -13,7 +13,7 @@
         Background="Transparent"
         BorderBrush="Transparent"
         WindowStartupLocation="CenterScreen"
-        Opacity="10"
+        Opacity="1"
         ResizeMode="NoResize" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
     <hc:Window.Resources>
         <Style TargetType="Control">
@@ -22,7 +22,7 @@
     </hc:Window.Resources>
     <Border Background="#FF222325" CornerRadius="10" BorderThickness="1" BorderBrush="#2A2D34">
         <Grid>
-            <hc:TextBox Name="User_" hc:InfoElement.Placeholder="Usuário" HorizontalAlignment="Left" Margin="456,189,0,0" VerticalAlignment="Top" Width="280" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold" CaretBrush="{x:Null}"/>
+            <hc:TextBox Name="User_" hc:InfoElement.Placeholder="Usuário" HorizontalAlignment="Left" Margin="456,189,0,0" VerticalAlignment="Top" Width="280" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold" CaretBrush="#E0E1E6"/>
             <hc:PasswordBox Name="Pass_" hc:InfoElement.Placeholder="Senha" HorizontalAlignment="Left" Margin="456,236,0,0" VerticalAlignment="Top" Width="280" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold"/>
             <Button x:Name="Login" Content="Login" Margin="456,312,62,0" VerticalAlignment="Top" Height="30" Background="#2A7AFF"  BorderThickness="1" Foreground="#E0E1E6" FontWeight="SemiBold" Click="Button_Click" BorderBrush="#2A7AFF"/>
             <Button x:Name="Fechar" Content="✖" Margin="744,4,0,0" VerticalAlignment="Top" Background="Transparent"   BorderThickness="0" Foreground="#6B6C6F" Click="Fechar_Click" Width="50" HorizontalAlignment="Left" Height="50"/>
@@ -32,10 +32,10 @@
                     <DropShadowEffect BlurRadius="10" ShadowDepth="2"/>
                 </Border.Effect>
             </Border>
-            <Button x:Name="Criar_Conta" Content="Cadastre-se" Margin="45,323,473,0" VerticalAlignment="Top" Height="30" Background="{x:Null}"  BorderThickness="1" Foreground="#FFE0E1E6" FontWeight="SemiBold" BorderBrush="#FFE0E1E6"/>
+            <Button x:Name="Criar_Conta" Content="Cadastre-se" Margin="45,323,473,0" VerticalAlignment="Top" Height="30" Background="#FFE0E1E6"  BorderThickness="1" Foreground="#FF2A7AFF" FontWeight="SemiBold" BorderBrush="#FFE0E1E6"/>
             <hc:ImageBlock HorizontalAlignment="Left" Height="150" Margin="105,78,0,0" VerticalAlignment="Top" Width="150" Source="/logo_dashbord.png" RenderOptions.BitmapScalingMode="HighQuality"/>
             <TextBlock VerticalAlignment="Top" Text="Usando suas informações de usuário e senha" TextWrapping="Wrap" Margin="454,128,0,0" HorizontalAlignment="Left" FontWeight="SemiBold" Foreground="#E0E1E6" FontSize="14" Width="288"/>
-            <TextBlock VerticalAlignment="Top" Text="Clique aqui para recuperar a senha" TextWrapping="Wrap" Margin="566,469,0,0" HorizontalAlignment="Left" FontWeight="SemiBold" Foreground="#FF2A7AFF" FontSize="14" Width="222"/>
+            <TextBlock VerticalAlignment="Top" Text="Clique aqui para recuperar a senha" TextWrapping="Wrap" Margin="566,469,0,0" HorizontalAlignment="Left" FontWeight="SemiBold" Foreground="#FF2A7AFF" FontSize="14" Width="222" Cursor="Hand" MouseLeftButtonDown="RecuperarSenha_Click"/>
             <TextBlock VerticalAlignment="Top" Text="CASO VOCÊ NÃO TEM UMA CONTA" TextWrapping="Wrap" Margin="18,255,0,0" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#FFE0E1E6" FontSize="20" Width="334"/>
             <TextBlock VerticalAlignment="Top" Text="ENTRE COM SUAS INFORMAÇÕES PESSOAIS E CRIE UMA CONTA" TextWrapping="Wrap" Margin="34,287,0,0" HorizontalAlignment="Left" FontWeight="SemiBold" Foreground="#FFE0E1E6" FontSize="10" Width="302"/>
             <CheckBox x:Name="SalvarLogin" Style="{StaticResource ModernCheckBox}" HorizontalAlignment="Left" Margin="465,279,0,0" VerticalAlignment="Top" Checked="SalvarLogin_Checked" Unchecked="SalvarLogin_Unchecked"/>

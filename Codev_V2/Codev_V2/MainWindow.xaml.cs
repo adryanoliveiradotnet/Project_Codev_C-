@@ -34,7 +34,7 @@ namespace Codev_V2
         }
         private void Inicio_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Pagina_Inicial());
+            return;
         }
         private void Conta_Click(object sender, RoutedEventArgs e)
         {
@@ -58,7 +58,6 @@ namespace Codev_V2
                 Duration = TimeSpan.FromMilliseconds(100)
             };
             BeginAnimation(OpacityProperty, fade);
-            MainFrame.Navigate(new Pagina_Inicial());
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

@@ -33,17 +33,17 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <!-- Nome -->
-                    <TextBlock Text="Cliente:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-                    <hc:TextBox x:Name="Clientes_" Grid.Row="0" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
+                    <TextBlock Text="Cliente:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Foreground="#E0E1E6"/>
+                    <hc:TextBox x:Name="Clientes_" Grid.Row="0" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                     <!-- Endereço -->
-                    <TextBlock Text="Endereço:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-                    <hc:TextBox x:Name="Endereço_" Grid.Row="2" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
+                    <TextBlock Text="Endereço:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Foreground="#E0E1E6"/>
+                    <hc:TextBox x:Name="Endereço_" Grid.Row="2" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                     <!-- Número -->
-                    <TextBlock Text="Número:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Foreground="#E0E1E6"/>
-                    <hc:TextBox  x:Name="Número_" Grid.Row="4" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Margin="422,0,0,10" Grid.RowSpan="2" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
+                    <TextBlock Text="Número:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" Foreground="#E0E1E6" Margin="0,6,0,0" Grid.RowSpan="2"/>
+                    <hc:TextBox  x:Name="Número_" Grid.Row="4" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Margin="422,0,0,10" Grid.RowSpan="2" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                     <!-- Bairro -->
-                    <TextBlock Text="Bairro:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
-                    <hc:TextBox x:Name="Bairro_" Grid.Row="6" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
+                    <TextBlock Text="Bairro:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Foreground="#E0E1E6"/>
+                    <hc:TextBox x:Name="Bairro_" Grid.Row="6" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                 </Grid>
             </GroupBox>
             <!-- BLOCO APARELHO -->
@@ -62,14 +62,14 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <!-- Marca -->
-                    <TextBlock Text="Marca:" Grid.Column="0" VerticalAlignment="Center"/>
-                    <hc:TextBox x:Name="Marca_" Grid.Row="0" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Margin="0,0,0,10" Grid.RowSpan="2" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
+                    <TextBlock Text="Marca:" Grid.Column="0" VerticalAlignment="Center" Foreground="#E0E1E6"/>
+                    <hc:TextBox x:Name="Marca_" Grid.Row="0" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Margin="0,0,0,10" Grid.RowSpan="2" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                     <!-- Modelo -->
-                    <TextBlock Text="Modelo:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-                    <hc:TextBox x:Name="Aparelho_" Grid.Row="2" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Margin="0,0,0,10" Grid.RowSpan="2" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
+                    <TextBlock Text="Modelo:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Foreground="#E0E1E6"/>
+                    <hc:TextBox x:Name="Aparelho_" Grid.Row="2" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Margin="0,0,0,10" Grid.RowSpan="2" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                     <!-- Defeito -->
-                    <TextBlock Text="Defeito Relatado:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top"/>
-                    <hc:TextBox x:Name="Defeito_" Grid.Row="4" Grid.Column="1" Height="80" AcceptsReturn="True" TextWrapping="Wrap" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
+                    <TextBlock Text="Defeito Relatado:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" Foreground="#E0E1E6"/>
+                    <hc:TextBox x:Name="Defeito_" Grid.Row="4" Grid.Column="1" Height="80" AcceptsReturn="True" TextWrapping="Wrap" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                 </Grid>
             </GroupBox>
             <Button x:Name="Salvar_" Content="Salvar Dados" VerticalAlignment="Top" Height="30" Background="#2A7AFF"  BorderThickness="0,0,0,0" Foreground="White" FontWeight="SemiBold" Margin="6,262,5,0" Grid.Row="2" Click="Salvar__Click"/>

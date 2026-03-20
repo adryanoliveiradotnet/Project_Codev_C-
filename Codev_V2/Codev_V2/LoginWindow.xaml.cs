@@ -57,6 +57,10 @@ namespace Codev_V2
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+        private void RecuperarSenha_Click(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Funcionalidade de recuperação de senha ainda não implementada.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var username = User_.Text.Trim();

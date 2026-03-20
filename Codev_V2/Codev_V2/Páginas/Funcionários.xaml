@@ -10,7 +10,7 @@
       Title="Funcionários">
 
     <Grid>
-        <DataGrid x:Name="CodevClientes" Background="#212328" Margin="0,30,0,0" RowHeight="40" SelectionMode="Single" AutoGenerateColumns="False"
+        <DataGrid x:Name="CodevFuncionarios" Background="#212328" Margin="0,30,0,0" RowHeight="40" SelectionMode="Single" AutoGenerateColumns="False"
   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" ColumnHeaderHeight="40" IsReadOnly="True" HeadersVisibility="Column" RowHeaderWidth="0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="     ID de Registro " Binding="{Binding IdRegistro}" Width="140">

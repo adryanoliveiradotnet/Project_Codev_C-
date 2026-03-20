@@ -12,7 +12,7 @@
         Background="Transparent"
         BorderBrush="Transparent"
         WindowStartupLocation="CenterScreen"
-        Opacity="10"
+        Opacity="1"
         ResizeMode="NoResize" Loaded="Window_Loaded">
     <Border Background="#212328" CornerRadius="10" BorderThickness="1" BorderBrush="#2A2D34">
         <Grid>

@@ -32,11 +32,6 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-            <!-- Gráfico OXYPLOT -->
-            <Style TargetType="oxy:PlotView">
-                <Setter Property="Height" Value="250"/>
-                <Setter Property="Margin" Value="10"/>
-            </Style>
             <!-- Data GRID -->
             <Style TargetType="DataGridCell">
                 <Setter Property="Background" Value="#212328"/>
@@ -69,9 +64,6 @@
                 <Setter Property="Background" Value="#212328"/>
                 <Setter Property="Foreground" Value="#E0E1E6"/>
                 <Style.Triggers>
-                    <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#393C44"/>
-                    </Trigger>
                     <Trigger Property="IsMouseOver" Value="True">
                         <Setter Property="Background" Value="#393C44"/>
                     </Trigger>

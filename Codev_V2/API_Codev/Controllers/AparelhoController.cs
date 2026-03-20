@@ -31,9 +31,7 @@ namespace API_Codev.Controllers
         [HttpPost]
         public async Task<ActionResult<Aparelhos>> Create(Aparelhos aparelho)
         {
-            if (string.IsNullOrWhiteSpace(aparelho.Marca) ||
-         string.IsNullOrWhiteSpace(aparelho.Aparelho) ||
-         string.IsNullOrWhiteSpace(aparelho.Defeito))
+            if (string.IsNullOrWhiteSpace(aparelho.Marca) || string.IsNullOrWhiteSpace(aparelho.Aparelho) || string.IsNullOrWhiteSpace(aparelho.Defeito))
             {
                 return BadRequest("Por favor, preencha todos os campos obrigatórios.");
             }
