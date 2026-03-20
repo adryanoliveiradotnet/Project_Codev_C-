@@ -130,7 +130,7 @@ Codev
 
 - Abrir no Visual Studio
 
-  Abrir a Solution (.sln).
+  Abrir a Solution (.slnx).
 
 - Configurar banco de dados
 
