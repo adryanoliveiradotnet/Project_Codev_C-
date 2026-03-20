@@ -69,12 +69,12 @@
                     <hc:TextBox x:Name="Aparelho_" Grid.Row="2" Grid.Column="1" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Margin="0,0,0,10" Grid.RowSpan="2" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
                     <!-- Defeito -->
                     <TextBlock Text="Defeito Relatado:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top"/>
-                    <hc:TextBox x:Name="Defeito_" Grid.Row="4" Grid.Column="1" Height="80" AcceptsReturn="True" TextWrapping="Wrap" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Foreground="#E0E1E6" CaretBrush="{x:Null}" Margin="0,21,0,89"/>
-                    <TextBlock Text="ATENÇÃO: CUIDADO ANTES DE PROSSEGUIR, ESSA AÇÃO NÃO É REVERSÍVEL. " Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="129,186,129,0" Foreground="Red" FontWeight="SemiBold"/>
+                    <hc:TextBox x:Name="Defeito_" Grid.Row="4" Grid.Column="1" Height="80" AcceptsReturn="True" TextWrapping="Wrap" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Foreground="#E0E1E6" CaretBrush="{x:Null}"/>
                 </Grid>
             </GroupBox>
             <Button x:Name="Deletar" Content="Deletar Cliente" VerticalAlignment="Top" Height="30" Background="Red"  BorderThickness="0,0,0,0" Foreground="White" FontWeight="SemiBold" Margin="6,286,5,0" Grid.Row="2" Click="Deletar_Click"/>
             <Button x:Name="Voltar" Content="Retornar a página anterior" VerticalAlignment="Top" Height="30" Background="#FF2A7AFF"  BorderThickness="0,0,0,0" Foreground="White" FontWeight="SemiBold" Margin="6,248,5,0" Grid.Row="2" Click="Voltar_Click"/>
+            <TextBlock Text="ATENÇÃO: CUIDADO ANTES DE PROSSEGUIR, ESSA AÇÃO NÃO É REVERSÍVEL. " Grid.Row="2" VerticalAlignment="Top" Margin="156,321,156,0" Foreground="Red" FontWeight="SemiBold" TextAlignment="Justify"/>
         </Grid>
     </Grid>
 </Page>

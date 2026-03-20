@@ -21,10 +21,13 @@ namespace Codev_V2.Páginas
             CarregarDadosCliente();
             ConfigurarCampos();
 
-            var aparelho = await Api.BuscarAparelhoPorClienteAsync(_clienteSelecionado.Id);
+            // CORRIGIDO: Chamando o método correto (plural) que retorna lista
+            var aparelhos = await Api.BuscarAparelhosPorClienteAsync(_clienteSelecionado.Id);
 
-            if (aparelho != null)
+            if (aparelhos != null && aparelhos.Any())
             {
+                // Pegando o primeiro aparelho (ou você pode exibir todos em uma lista)
+                var aparelho = aparelhos.First();
                 Marca_.Text = aparelho.Marca;
                 Aparelho_.Text = aparelho.Aparelho;
                 Defeito_.Text = aparelho.Defeito;

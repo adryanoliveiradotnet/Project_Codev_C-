@@ -65,7 +65,6 @@ namespace Codev_V2.Web
         }
         public static async Task<Api.Clientes?>CriarClientesAsync(Clientes cliente)
         {
-
             try
             {
                 var response = await Http.PostAsJsonAsync("api/client", cliente);
@@ -98,14 +97,18 @@ namespace Codev_V2.Web
                 return false;
             }
         }
-        public static async Task<Api.Aparelhos?>BuscarAparelhoPorClienteAsync(int clienteId)
+        public static async Task<List<Api.Aparelhos>?>BuscarAparelhosPorClienteAsync(int clienteId)
         {
             try
             {
-                return await Http.GetFromJsonAsync<Api.Aparelhos>($"api/aparelhos/client/{clienteId}");
+                var response = await Http.GetAsync($"api/aparelho/client/{clienteId}");
+                if (!response.IsSuccessStatusCode)
+                    return null;
+                return await response.Content.ReadFromJsonAsync<List<Api.Aparelhos>>();
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show($"Erro ao buscar aparelhos: {ex.Message}");
                 return null;
             }
         }

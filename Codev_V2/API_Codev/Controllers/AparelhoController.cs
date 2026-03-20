@@ -14,7 +14,6 @@ namespace API_Codev.Controllers
         {
             _context = context;
         }
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Aparelhos>>> GetAll()
         {
@@ -85,14 +84,15 @@ namespace API_Codev.Controllers
             return NoContent();
         }
         [HttpGet("client/{clienteId}")]
-        public async Task<ActionResult<Aparelhos>> GetByClienteId(int clienteId)
+        public async Task<ActionResult<List<Aparelhos>>> GetByClienteId(int clienteId)
         {
-            var aparelho = await _context.Aparelhos
+            var aparelhos = await _context.Aparelhos
                 .Include(a => a.Clientes)
-                .FirstOrDefaultAsync(a => a.Clientes.Id == clienteId);
-            if (aparelho == null)
-                return NotFound("Aparelho não encontrado para este cliente.");
-            return Ok(aparelho);
+                .Where(a => a.Clientes.Id == clienteId)
+                .ToListAsync();
+            if (aparelhos == null || !aparelhos.Any())
+                return NotFound("Nenhum aparelho encontrado para este cliente.");
+            return Ok(aparelhos);
         }
     }
 }
