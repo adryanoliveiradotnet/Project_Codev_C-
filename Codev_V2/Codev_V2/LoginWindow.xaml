@@ -23,7 +23,7 @@
     <Border Background="#FF222325" CornerRadius="10" BorderThickness="1" BorderBrush="#2A2D34">
         <Grid>
             <hc:TextBox Name="User_" hc:InfoElement.Placeholder="Digite seu email" HorizontalAlignment="Left" Margin="456,189,0,0" VerticalAlignment="Top" Width="280" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold" CaretBrush="#E0E1E6"/>
-            <hc:PasswordBox Name="Pass_" hc:InfoElement.Placeholder="Digite sua enha" HorizontalAlignment="Left" Margin="456,236,0,0" VerticalAlignment="Top" Width="280" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold"/>
+            <hc:PasswordBox Name="Pass_" hc:InfoElement.Placeholder="Digite sua senha" HorizontalAlignment="Left" Margin="456,236,0,0" VerticalAlignment="Top" Width="280" Height="30" Background="#2A2D34" BorderThickness="0" Foreground="#E0E1E6" FontWeight="SemiBold"/>
             <Button x:Name="Login" Content="Login" Margin="456,312,62,0" VerticalAlignment="Top" Height="30" Background="#2A7AFF"  BorderThickness="1" Foreground="#E0E1E6" FontWeight="SemiBold" Click="Button_Click" BorderBrush="#2A7AFF"/>
             <Button x:Name="Fechar" Content="✖" Margin="744,4,0,0" VerticalAlignment="Top" Background="Transparent"   BorderThickness="0" Foreground="#6B6C6F" Click="Fechar_Click" Width="50" HorizontalAlignment="Left" Height="50"/>
             <TextBlock VerticalAlignment="Top" Text="ENTRE COM SUA CONTA" TextWrapping="Wrap" Margin="456,96,0,0" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#FF2A7AFF" FontSize="24" Width="284"/>
