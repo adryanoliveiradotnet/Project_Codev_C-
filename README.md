@@ -115,7 +115,7 @@ PostgreSQL Database
 
 Project Codev
 
- ➞   Codev_V2
+-    Codev_V2
      Aplicação WPF (interface desktop)
  ➞
     API_Codev
