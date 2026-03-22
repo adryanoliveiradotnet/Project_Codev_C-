@@ -6,27 +6,36 @@
              StartupUri="Splash.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Style Check BOX -->
-            <Style x:Key="ModernCheckBox" TargetType="CheckBox">
-                <Setter Property="Width" Value="18"/>
-                <Setter Property="Height" Value="18"/>
+            <!-- Style Toggle Switch -->
+            <Style x:Key="ModernToggle" TargetType="ToggleButton">
+                <Setter Property="Width" Value="40"/>
+                <Setter Property="Height" Value="20"/>
                 <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="CheckBox">
-                            <Border x:Name="Border" Width="18" Height="18" CornerRadius="4" Background="#2A7AFF" BorderBrush="#2A7AFF" BorderThickness="1">
-                                <Grid>
-                                    <Path x:Name="CheckMark" Data="M 2 8 L 7 13 L 16 3" Stroke="White" StrokeThickness="2" Visibility="Collapsed"/>
-                                </Grid>
-                            </Border>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Grid>
+                                <Border x:Name="Track" Width="40" Height="20" CornerRadius="10" Background="#393C44" BorderThickness="0"/>
+                                <Border x:Name="Thumb" Width="16" Height="16" CornerRadius="8" Background="#A0A1A6" HorizontalAlignment="Left" Margin="2,0,22,0" VerticalAlignment="Center"/>
+                            </Grid>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsChecked" Value="True">
-                                    <Setter TargetName="Border" Property="Background" Value="#2A7AFF"/>
-                                    <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                                    <Setter TargetName="Track" Property="Background" Value="#2A7AFF"/>
+                                    <Setter TargetName="Thumb" Property="Background" Value="White"/>
+                                    <Setter TargetName="Thumb" Property="HorizontalAlignment" Value="Right"/>
+                                    <Setter TargetName="Thumb" Property="Margin" Value="22,0,2,0"/>
                                 </Trigger>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter TargetName="Border" Property="BorderBrush" Value="#4C8DFF"/>
+                                    <Setter TargetName="Track" Property="Background" Value="#4A4D56"/>
                                 </Trigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsMouseOver" Value="True"/>
+                                        <Condition Property="IsChecked" Value="True"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="Track" Property="Background" Value="#4C8DFF"/>
+                                </MultiTrigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
@@ -104,7 +113,6 @@
             </Style>
             <!-- Buttons Menu STYLE -->
             <Style x:Key="MenuButtonNoHover" TargetType="Button">
-
                 <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="BorderBrush" Value="Transparent"/>
                 <Setter Property="Foreground" Value="WhiteSmoke"/>
@@ -116,9 +124,22 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6">
-                                <ContentPresenter Margin="{TemplateBinding Padding}" VerticalAlignment="Center" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                            <Border x:Name="MenuBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6">
+                                <Grid>
+                                    <Border x:Name="HoverBar" Width="3" HorizontalAlignment="Left" Background="#E0E1E6" CornerRadius="2" Margin="2,4,0,4" Visibility="Collapsed"/>
+                                    <ContentPresenter Margin="{TemplateBinding Padding}" VerticalAlignment="Center" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                                </Grid>
                             </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="MenuBorder" Property="Background" Value="#1AFFFFFF"/>
+                                    <Setter TargetName="HoverBar" Property="Visibility" Value="Visible"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="MenuBorder" Property="Background" Value="#33FFFFFF"/>
+                                    <Setter TargetName="HoverBar" Property="Visibility" Value="Visible"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>

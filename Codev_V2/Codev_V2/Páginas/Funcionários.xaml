@@ -7,13 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="620" d:DesignWidth="801"
       Background="#212328"
-      Title="Funcionários">
+      Title="Funcionários" Loaded="Page_Loaded">
 
     <Grid>
         <DataGrid x:Name="CodevFuncionarios" Background="#212328" Margin="0,30,0,0" RowHeight="40" SelectionMode="Single" AutoGenerateColumns="False"
   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" ColumnHeaderHeight="40" IsReadOnly="True" HeadersVisibility="Column" RowHeaderWidth="0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="     ID de Registro " Binding="{Binding IdRegistro}" Width="140">
+                <DataGridTextColumn Header="         ID" Binding="{Binding Id}" Width="70">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -21,7 +21,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header=" Nome " Binding="{Binding Nome}" Width="395">
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="450">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -29,7 +29,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header=" Função " Binding="{Binding Função}" Width="150">
+                <DataGridTextColumn Header="Função" Binding="{Binding Função}" Width="*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -37,7 +37,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header=" Data de entrada " Binding="{Binding DataEntrada}" Width="150">
+                <DataGridTextColumn Header="Data de entrada" Binding="{Binding Data_Entrada}" Width="*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="VerticalAlignment" Value="Center"/>

@@ -1,4 +1,5 @@
 ﻿using Codev_V2;
+using Codev_V2.Functions;
 using Codev_V2.Páginas;
 using System.Text;
 using System.Windows;
@@ -26,7 +27,11 @@ namespace Codev_V2
         }
         private void Fechar_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            var result = MessageBox.Show("Você deseja sair?", "Aviso", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.OK)
+            {
+                Application.Current.Shutdown();
+            }
         }
         private void Clientes_Click(object sender, RoutedEventArgs e)
         {
@@ -34,7 +39,7 @@ namespace Codev_V2
         }
         private void Inicio_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            MainFrame.Navigate(new PaginaIncial());
         }
         private void Conta_Click(object sender, RoutedEventArgs e)
         {
@@ -42,11 +47,15 @@ namespace Codev_V2
         }
         private void Sobre_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Página desativada ou removida.", "Informação", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
-            new Splash().Show();
+            var result = MessageBox.Show("Deseja encerrar a sessão?", "Logout", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+            if (result != MessageBoxResult.OK) return;
+            RegistrarLogin.Clear();
+            var login = new LoginWindow();
+            login.Show();
             Close();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -58,6 +67,7 @@ namespace Codev_V2
                 Duration = TimeSpan.FromMilliseconds(100)
             };
             BeginAnimation(OpacityProperty, fade);
+            MainFrame.Navigate(new PaginaIncial());
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

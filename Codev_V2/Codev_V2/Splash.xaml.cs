@@ -31,9 +31,7 @@ namespace Codev_V2
                 To = 1,
                 Duration = TimeSpan.FromMilliseconds(100)
             };
-
             BeginAnimation(OpacityProperty, fade);
-
             var ok = await Api.DBAsync();
             if (!ok)
             {

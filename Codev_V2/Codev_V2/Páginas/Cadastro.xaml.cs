@@ -1,4 +1,5 @@
-﻿using Codev_V2.Web;
+﻿using Codev_V2;
+using Codev_V2.Web;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -84,7 +85,7 @@ namespace Codev_V2.Páginas
                 return;
             }
 
-            MessageBox.Show("Cliente e aparelho cadastrados com sucesso.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Dados cadastrados com sucesso.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
 
             Clientes_.Text = "";
             Endereço_.Text = "";
@@ -104,7 +105,7 @@ namespace Codev_V2.Páginas
             Aparelho_.Text = "";
             Defeito_.Text = "";
 
-            MessageBox.Show("Os campos foram limpos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Question);
+            MessageBox.Show("Todos os campos foram limpos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

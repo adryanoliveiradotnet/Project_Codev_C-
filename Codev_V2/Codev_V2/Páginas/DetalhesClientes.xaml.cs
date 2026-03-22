@@ -1,4 +1,6 @@
-﻿using Codev_V2.Web;
+﻿using Codev_V2;
+using Codev_V2.Web;
+using HandyControl.Controls;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -58,11 +60,11 @@ namespace Codev_V2.Páginas
         }
         private async void Deletar_Click(object sender, RoutedEventArgs e)
         {
-            var resultado = MessageBox.Show(
-                $"Tem certeza que deseja deletar o cliente {_clienteSelecionado.Cliente}?",
-                "Confirmar exclusão",
-                MessageBoxButton.YesNo,
-                MessageBoxImage.Warning);
+            var resultado = System.Windows.MessageBox.Show(
+              $"Tem certeza que deseja deletar o cliente {_clienteSelecionado.Cliente}?",
+              "Confirmar exclusão",
+              MessageBoxButton.YesNo,
+              MessageBoxImage.Warning);
 
             if (resultado != MessageBoxResult.Yes)
                 return;
@@ -71,10 +73,10 @@ namespace Codev_V2.Páginas
 
             if (!sucesso)
             {
-                MessageBox.Show("Erro ao deletar cliente.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show("Erro ao deletar cliente.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            MessageBox.Show("Cliente deletado com sucesso.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+            System.Windows.MessageBox.Show("Cliente deletado com sucesso.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
 
             if (NavigationService != null && NavigationService.CanGoBack) NavigationService.GoBack();
         }

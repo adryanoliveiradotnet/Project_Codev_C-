@@ -7,4 +7,5 @@
   </Folder>
   <Project Path="API_Codev/API_Codev.csproj" Id="9a561757-e9d0-4b55-ac95-5fa3e94a9c73" />
   <Project Path="Codev_V2/Codev_V2.csproj" />
+  <Project Path="Register_Codev/Register_Codev.csproj" Id="6b038706-4fd0-4d80-8452-c043a28842ad" />
 </Solution>

@@ -22,5 +22,13 @@ namespace Codev_V2.Páginas
         {
             InitializeComponent();
         }
+        public async Task ListFuncionários()
+        {
+            CodevFuncionarios.ItemsSource = await Web.Api.ListarFuncionariosAsync();
+        }
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            await ListFuncionários();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Codev_V2;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -59,6 +60,13 @@ namespace Codev_V2.Web
             [JsonIgnore]
             public List<Aparelhos> Aparelhos { get; set; } = new();
         }
+        public class Funcionario
+        {
+            public int Id { get; set; }
+            public string Nome { get; set; } = "";
+            public string Função { get; set; } = "";
+            public DateTime Data_Entrada { get; set; } = DateTime.Now;
+        }
         public static async Task<List<Clientes>?>ListarClientesAsync()
         {
             return await Http.GetFromJsonAsync<List<Clientes>>("/api/client");
@@ -85,10 +93,6 @@ namespace Codev_V2.Web
             try
             {
                 var response = await Http.PostAsJsonAsync("api/aparelho", aparelho);
-                var conteudo = await response.Content.ReadAsStringAsync();
-
-                MessageBox.Show($"Status aparelho: {(int)response.StatusCode}\nResposta: {conteudo}");
-
                 return response.IsSuccessStatusCode;
             }
             catch (Exception ex)
@@ -124,5 +128,54 @@ namespace Codev_V2.Web
                 return false;
             }
         }
+        public static async Task<List<Funcionario>?>ListarFuncionariosAsync()
+        {
+            try
+            {
+                return await Http.GetFromJsonAsync<List<Funcionario>>("api/funcionario");
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static async Task<bool> CriarFuncionarioAsync(Funcionario funcionario)
+        {
+            try
+            {
+                var response = await Http.PostAsJsonAsync("api/funcionario", funcionario);
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        // ──────────────────────────────────────── Auth Register by Claude Code ───────────────────────────────────────────────//
+        public class NovoUser
+        {
+            [JsonPropertyName("username")]
+            public string Username { get; set; } = "";
+
+            [JsonPropertyName("password")]
+            public string Password { get; set; } = "";
+
+            [JsonPropertyName("role")]
+            public string Role { get; set; } = "user";
+        }
+        public static async Task<bool> RegistrarUsuarioAsync(NovoUser user)
+        {
+            try
+            {
+                var response = await Http.PostAsJsonAsync("api/auth/register", user);
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        // ──────────────────────────────────────── Auth Register by Claude Code ───────────────────────────────────────────────//
     }
 }

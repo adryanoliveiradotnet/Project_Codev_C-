@@ -28,7 +28,11 @@ namespace Codev_V2
         }
         private void Fechar_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            var result = MessageBox.Show("Você deseja sair?", "Aviso", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
         private void SalvarLogin_Checked(object sender, RoutedEventArgs e)
         {
@@ -59,7 +63,7 @@ namespace Codev_V2
         }
         private void RecuperarSenha_Click(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Funcionalidade de recuperação de senha ainda não implementada.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Funcionalidade de recuperação de senha ainda não implementada.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -67,13 +71,13 @@ namespace Codev_V2
             var password = Pass_.Password;
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Por favor, informe o usuário e senha");
+                MessageBox.Show("Por favor, informe o usuário e a senha.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             var result = await Api.LoginAsync(username, password);
             if (result is null)
             {
-                MessageBox.Show("Usuário ou senha inválidos", "Alerta", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Usuário ou senha inválidos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             new MainWindow(result.Username).Show();

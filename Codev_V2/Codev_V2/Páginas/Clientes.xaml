@@ -12,7 +12,7 @@
         <DataGrid x:Name="CodevClientes" Background="#212328" Margin="0,30,0,0" RowHeight="40" SelectionMode="Single" AutoGenerateColumns="False"
          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" ColumnHeaderHeight="40" IsReadOnly="True" HeadersVisibility="Column" RowHeaderWidth="0" MouseDoubleClick="CodevClientes_MouseDoubleClick">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="      ID" Binding="{Binding Id}" Width="70">
+                <DataGridTextColumn Header="         ID" Binding="{Binding Id}" Width="70">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="VerticalAlignment" Value="Center"/>

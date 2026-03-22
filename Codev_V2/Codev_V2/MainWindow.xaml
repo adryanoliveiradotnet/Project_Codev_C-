@@ -6,6 +6,8 @@
         xmlns:hc="https://handyorg.github.io/handycontrol" 
         xmlns:local="clr-namespace:Codev_V2"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
@@ -54,8 +56,8 @@
                     </Button>
                     <Button Style="{StaticResource MenuButtonNoHover}" Click="Sobre_Click" Margin="0,8,0,0" Background="{x:Null}">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="InformationOutline" Width="22" Height="22" Foreground="#E0E1E6" Margin="0,0,10,0" FontWeight="SemiBold"/>
-                            <TextBlock Text="Sobre Nós" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                            <materialDesign:PackIcon Kind="Support" Width="22" Height="22" Foreground="#E0E1E6" Margin="0,0,10,0" FontWeight="SemiBold"/>
+                            <TextBlock Text="Suporte" VerticalAlignment="Center" FontWeight="SemiBold"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
@@ -68,13 +70,13 @@
                     <TextBlock Text="Logout" VerticalAlignment="Center" FontWeight="SemiBold"/>
                 </StackPanel>
             </Button>
-            <Button Style="{StaticResource MenuButtonNoHover}" Click="Conta_Click" Background="{x:Null}" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,6,652,674">
+            <Button Style="{StaticResource ButtonBaseStyle}" Background="{x:Null}" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,6,652,674" BorderBrush="{x:Null}">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="Account" Width="22" Height="22" Foreground="#E0E1E6" Margin="0,0,10,0" FontWeight="SemiBold"/>
-                    <TextBlock Text="Usuário:" VerticalAlignment="Center" FontWeight="SemiBold" Width="49"/>
+                    <materialDesign:PackIcon Kind="Lock" Width="22" Height="16" Foreground="#E0E1E6" FontWeight="SemiBold"/>
+                    <TextBlock Text="Usuário conectado:" VerticalAlignment="Center" FontWeight="SemiBold" Width="108"/>
                 </StackPanel>
             </Button>
-            <TextBlock x:Name="Usuário_conectado" Text="" FontWeight="SemiBold" Grid.Column="1" Margin="110,17,588,679" Foreground="#FF2A7AFF" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="Usuário_conectado" Text="" FontWeight="SemiBold" Grid.Column="2" Margin="19,17,449,683" Foreground="#FF2A7AFF"/>
         </Grid>
     </Border>
 </hc:Window>

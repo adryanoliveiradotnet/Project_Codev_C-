@@ -72,8 +72,8 @@
                     <hc:TextBox x:Name="Defeito_" Grid.Row="4" Grid.Column="1" Height="80" AcceptsReturn="True" TextWrapping="Wrap" BorderBrush="#2A2D34" Background="#2A2D34" Grid.ColumnSpan="2" Foreground="#E0E1E6" CaretBrush="#E0E1E6"/>
                 </Grid>
             </GroupBox>
-            <Button x:Name="Salvar_" Content="Salvar Dados" VerticalAlignment="Top" Height="30" Background="#2A7AFF"  BorderThickness="0,0,0,0" Foreground="White" FontWeight="SemiBold" Margin="6,262,5,0" Grid.Row="2" Click="Salvar__Click"/>
-            <Button x:Name="Limpar_" Content="Limpar Campos" VerticalAlignment="Top" Height="30" Background="Red"  BorderThickness="0,0,0,0" Foreground="White" FontWeight="SemiBold" Margin="6,305,5,0" Grid.Row="2" Click="Limpar__Click"/>
+            <Button x:Name="Salvar_" Content="Salvar Dados" VerticalAlignment="Top" Height="30" Background="#2A7AFF"  BorderThickness="0,0,0,0" Foreground="White" FontWeight="SemiBold" Margin="6,286,5,0" Grid.Row="2" Click="Salvar__Click"/>
+            <Button x:Name="Limpar_" Content="Limpar Campos" VerticalAlignment="Top" Height="30" Background="Red"  BorderThickness="0,0,0,0" Foreground="White" FontWeight="SemiBold" Margin="6,248,5,0" Grid.Row="2" Click="Limpar__Click"/>
         </Grid>
     </Grid>
 </Page>
