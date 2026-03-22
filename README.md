@@ -7,10 +7,11 @@ O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, 
 
 # Interface
 
-## UI_Dashboard
+
+## UI_Splash
 
 <p align="center">
-  <img src="Codev_V2/Assets/UI_Dashboard.png" width="900">
+  <img src="Codev_V2/Assets/UI_Splash.png" width="900">
 </p>
 
 ## UI_Login
@@ -19,10 +20,10 @@ O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, 
   <img src="Codev_V2/Assets/UI_Login.png" width="900">
 </p>
 
-## UI_Splash
+## UI_Dashboard
 
 <p align="center">
-  <img src="Codev_V2/Assets/UI_Splash.png" width="900">
+  <img src="Codev_V2/Assets/UI_Dashboard.png" width="900">
 </p>
 
 ## UI_Client_Page
