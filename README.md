@@ -113,19 +113,19 @@ PostgreSQL Database
 
 ## Estrutura do projeto
 
-Codev
-│
-├── Codev_V2
-│   └── Aplicação WPF (interface desktop)
-│
-├── API_Codev
-│   └── Aplicação CLI (interface de registro)
-│
-├── API_Codev
-│   └── ASP.NET Core Web API
-│
-└── Database
-    └── PostgreSQL
+Project Codev
+
+ ➞   Codev_V2
+     Aplicação WPF (interface desktop)
+ ➞
+    API_Codev
+    Aplicação CLI (interface de registro)
+ ➞
+    API_Codev
+    ASP.NET Core Web API
+ ➞
+    Database
+    PostgreSQL
 
 ---
 
