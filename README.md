@@ -56,6 +56,7 @@ O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, 
 - WPF
 - XAML
 - HandyControl
+- MaterialDesign
 
 ## Ferramentas
 
@@ -87,8 +88,11 @@ PostgreSQL Database
 
 - Tela de login com autenticação
 - Conexão com API REST
-- Verificação de status da API (Health Check)
+- Verificação de status da API
 - Registro de clientes
+- Registro de funcionários
+- Exibição de detalhes dos clientes
+- Exibição dos últimos clientes cadastrados em cards
 - Registro de aparelhos
 - Cadastro de defeitos relatados
 - Sistema de logout
@@ -113,6 +117,9 @@ Codev
 │
 ├── Codev_V2
 │   └── Aplicação WPF (interface desktop)
+│
+├── API_Codev
+│   └── Aplicação CLI (interface de registro)
 │
 ├── API_Codev
 │   └── ASP.NET Core Web API
