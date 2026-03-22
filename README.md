@@ -10,7 +10,7 @@ O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, 
 ## UI_Dashboard
 
 <p align="center">
-  <img src="Codev_V2/Assets/UI_Dashbord.png" width="900">
+  <img src="Codev_V2/Assets/UI_Dashboard.png" width="900">
 </p>
 
 ## UI_Login
