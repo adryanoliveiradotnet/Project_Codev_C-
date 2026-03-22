@@ -71,9 +71,9 @@ O projeto tem como objetivo organizar clientes, aparelhos e ordens de serviço, 
 ## O sistema utiliza uma arquitetura em três camadas:
 
 WPF Desktop (Interface)
-        ↓
+        ➞
 ASP.NET REST API
-        ↓
+        ➞
 PostgreSQL Database
 
 ## Essa separação permite:
