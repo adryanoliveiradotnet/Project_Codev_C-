@@ -137,7 +137,7 @@ Project Codev
 
 - Clonar o repositório
 
-  git clone https://github.com/seuusuario/Project_Codev_C-.git
+  git clone https://github.com/adryanoliveiradotnet/Project_Codev_C-.git
 
 - Abrir no Visual Studio
 
